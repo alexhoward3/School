@@ -1,0 +1,56 @@
+﻿Alex Howard
+CS 2050-003
+Linked Lists
+Array Lists
+Linked List Timing:
+
+Get High to Low: 15.860577715
+Get Low to High: 23.551225172
+Remove High to Low: 23.723934081
+Remove Low to High: 86.952282477
+
+DONE! Total time: 150.754448896
+Array List Timing:
+
+Get High to Low: 0.005714685
+Get Low to High: 0.003775739
+Remove High to Low: 16.390509674
+Remove Low to High: 16.312274891
+
+DONE! Total time: 33.319431445
+Linked List Timing:
+
+Get High to Low: 16.022891977
+Get Low to High: 25.111739396
+Remove High to Low: 25.316301858
+Remove Low to High: 88.128916688
+
+DONE! Total time: 155.217616988
+Array List Timing:
+
+Get High to Low: 0.006133071
+Get Low to High: 0.003705357
+Remove High to Low: 16.508357702
+Remove Low to High: 16.370723823
+
+DONE! Total time: 33.4965642
+Linked List Timing:
+
+Get High to Low: 16.559125143
+Get Low to High: 23.408912797
+Remove High to Low: 23.550589773
+Remove Low to High: 87.05064036
+
+DONE! Total time: 151.210880776
+Array List Timing:
+
+Get High to Low: 0.005577341
+Get Low to High: 0.004039674
+Remove High to Low: 16.507623083
+Remove Low to High: 16.288400489
+
+DONE! Total time: 33.410577544
+
+The reason why Linked Lists take so long to remove elements from low to high is when something is removed from a linked list at the very beginning of the list has to be “re-linked”. Coming from the back end just sets the last element to null, not re-linking what is on the front end (and also the back, as Java's LinkedList class creates a doubly-linked list) to the cell ahead of the current cell, possibly re-linking the head, etc.
+
+The Array List does not suffer this same problem because nothing is being shifted or changed with the array itself. The elements are only being removed from the list. The list itself does not have to be restructured and all of these extra operations of re-linking do not occur, saving time.
